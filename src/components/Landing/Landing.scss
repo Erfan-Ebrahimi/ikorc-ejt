@@ -1,0 +1,178 @@
+#hero {
+    width: 100%;
+    height: 100vh;
+    background:none;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  @media (min-width: 1024px) {
+    #hero {
+      background-attachment: fixed;
+    }
+  }
+  #hero .ed{
+    background: rgb(73,124,168);
+    background: radial-gradient(circle, rgba(129, 187, 238, 0.158) 0%, rgba(27,36,50,0.15449929971988796) 100%);
+    transition: all .5s ease;
+    
+  }
+  #hero .ed img{
+    position:sticky !important;
+    z-index: 1 !important;
+    width: 65px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  #hero .ed h1:hover{
+    color: #1d66f8;
+  }
+  #hero .ed .ere{
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-bottom: 40px !important;
+    padding-right: 10px !important;
+  }
+  
+  #hero .hero-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 90px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15px;
+  }
+  #hero .hero-container #bg-video{
+    position: absolute;
+    z-index: -100;
+    top: -263px;
+    left: -555px;
+    filter: grayscale(80%);
+    min-width: 1960px;
+    
+  }
+  #hero .hero-container img{
+    width: 100px;
+    z-index: -100;
+    background: none;
+    position: absolute;
+    top: 100px;
+  }
+  @media (max-width: 991px) {
+    #hero .hero-container {
+      top: 70px;
+    }
+  }
+  @media (max-width: 574px) {
+    #hero .f1 h1{
+      font-size: 20px;
+    }
+    #hero .f1 h1 span{
+      font-size: 51px;
+      letter-spacing: 29px;
+  
+    }
+    #hero .f1 .p2{
+      font-size: 14px;
+      letter-spacing: 2px;
+      background: rgba(236, 183, 183, 0.068);
+    }
+    #hero .about-btn {
+      letter-spacing: 2px;
+      padding: 8px 6px;
+    }
+    #hero #bg-video{
+      min-width: 600px !important;
+    }
+  }
+  
+  #hero h1 {
+    cursor: pointer;
+  }
+  
+  #hero .f1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  @media (max-width: 991px) {
+    #hero h1 {
+      font-size: 34px;
+    }
+  }
+  
+  #hero .p2{
+    color: #ffeaf0;
+    font-weight: 200;
+    font-size: 19px;
+    background: rgba(188, 143, 143, 0.26);
+    border-radius: 10px;
+    border-bottom: 3px solid rosybrown;
+    cursor: pointer;
+    padding: 5px 8px;
+  }
+  
+  @media (max-width: 991px) {
+    #hero p {
+      font-size: 16px;
+    }
+  }
+  
+  #hero .about-btn {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    line-height: 1;
+    margin: 0;
+    color: rgb(160, 0, 0);
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    border: 2px solid #fff;
+    background:rgba(195, 235, 241, 0.295) ;
+  }
+  
+  
+  #hero .about-btn:hover {
+    background:#fff;
+    color: rgb(179, 17, 27);
+    font-weight: 700;
+  }
+  
+  @-webkit-keyframes pulsate-btn {
+    0% {
+      transform: scale(0.6, 0.6);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: scale(1, 1);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes pulsate-btn {
+    0% {
+      transform: scale(0.6, 0.6);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: scale(1, 1);
+      opacity: 0;
+    }
+  }
+  
