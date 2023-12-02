@@ -1,17 +1,18 @@
+import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
 
 const Navbar = () => {
+
     return (
-        <nav id="navbar" className="navbar order-last order-lg-0">
-            <ul>
-                <li><a className="nav-link scrollto font-MorabbaM text-xl active" href="#hero">خانه</a></li>
-                <li><a className="nav-link scrollto font-MorabbaM text-xl" href="#about">درباره ما</a></li>
-                <li><a className="nav-link scrollto font-MorabbaM text-xl" href="#speakers">اخبار</a></li>
-                <li><a className="nav-link scrollto font-MorabbaM text-xl" href="#venue">آدرس</a></li>
-                <li><a className="nav-link scrollto font-MorabbaM text-xl" href="#contact">تماس با ما</a></li>
-                <li><a className="nav-link scrollto font-MorabbaM text-xl" href="#gallery">گالری</a></li>
-                <li><a className="nav-link scrollto font-MorabbaM text-xl" href="#gallery">خدمات</a></li>
+        <nav className="navbar" >
+            <ul className="flex gap-x-5 mr-5 rounded-lg  ">
+                <li className="relative"><Link className="nav-link flex items-center justify-between text-[#ee1251ca] whitespace-nowrap transition-all duration-300 relative px-1 py-1 font-DanaB text-lg" to="#hero">خانه</Link></li>
+                <li className="relative"><Link className="nav-link flex items-center justify-between text-[#ee1251ca] whitespace-nowrap transition-all duration-300 relative px-1 py-1 font-DanaB text-lg" to="#about">خدمات</Link></li>
+                <li className="relative"><Link className="nav-link flex items-center justify-between text-[#ee1251ca] whitespace-nowrap transition-all duration-300 relative px-1 py-1 font-DanaB text-lg" to="#speakers">اخبار</Link></li>
+                <li className="relative"><Link className="nav-link flex items-center justify-between text-[#ee1251ca] whitespace-nowrap transition-all duration-300 relative px-1 py-1 font-DanaB text-lg" to="#gallery">گالری</Link></li>
+                <li className="relative"><Link className="nav-link flex items-center justify-between text-[#ee1251ca] whitespace-nowrap transition-all duration-300 relative px-1 py-1 font-DanaB text-lg" to="#venue">آدرس</Link></li>
+                <li className="relative"><Link className="nav-link flex items-center justify-between text-[#ee1251ca] whitespace-nowrap transition-all duration-300 relative px-1 py-1 font-DanaB text-lg" to="#contact">تماس با ما</Link></li>
             </ul>
             <i className="bi bi-list mobile-nav-toggle"></i>
         </nav>

@@ -1,0 +1,11 @@
+#gallery img {
+  filter: grayscale(50%);
+  transition: all 1s ease-out;
+  border-radius: 20px;
+}
+#gallery img:hover {
+  box-shadow: 1px 1px 1px blue;
+  transition: all 1s ease-out;
+  scale: 90%;
+  filter: grayscale(20%);
+}
