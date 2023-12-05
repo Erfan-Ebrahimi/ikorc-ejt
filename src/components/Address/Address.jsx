@@ -10,7 +10,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 const Address = () => {
     return (
         <section id="address">
-            <h2 className="title-header w-1/4 mx-auto mb-[60px] pb-5 text-4xl text-center text-transparent  bg-clip-text bg-gradient-to-t from-rose-400 to-sky-600 font-MorabbaB">آدرس</h2>
+            {/* <h2 className="title-header w-1/4 mx-auto mb-[60px] pb-5 text-4xl text-center text-transparent  bg-clip-text bg-gradient-to-t from-rose-400 to-sky-600 font-MorabbaB">آدرس</h2> */}
             <div className="address">
                 <h3 className="text-red-100 bg-black/40 p-5 mb-10 text-center text-5xl font-MorabbaB">شهر مهاجران _ منطقه C _  باشگاه خدمات اجتماعی پالایشگاه شازند</h3>
                 <div className="container flex justify-between" >

@@ -58,11 +58,8 @@ const Footer = () => {
             </div>
 
             <div className="container">
-                <div className="copyright">
+                <div className="copyright text-red-200">
                     &copy; Copyright <span>IKORC</span> All Rights Reserved.
-                </div>
-                <div className="credits">
-                    <p>Designed by <a className="hvr-grow" href="https://t.me/ME_7676"><img loading="lazy" src="./assets/img/ME.webp" alt="" /></a></p>
                 </div>
             </div>
         </footer>
