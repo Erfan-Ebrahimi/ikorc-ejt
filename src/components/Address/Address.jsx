@@ -1,36 +1,51 @@
-import "./Address.scss"
+import "./Address.scss";
+
+import { FaEdgeLegacy } from "react-icons/fa";
+import { FaPhoneVolume } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { FaTelegramPlane } from "react-icons/fa";
+
+
+
 const Address = () => {
     return (
-        <section id="venue">
+        <section id="address">
+            <h2 className="title-header w-1/4 mx-auto mb-[60px] pb-5 text-4xl text-center text-transparent  bg-clip-text bg-gradient-to-t from-rose-400 to-sky-600 font-MorabbaB">آدرس</h2>
+            <div className="address">
+                <h3 className="text-red-100 bg-black/40 p-5 mb-10 text-center text-5xl font-MorabbaB">شهر مهاجران _ منطقه C _  باشگاه خدمات اجتماعی پالایشگاه شازند</h3>
+                <div className="container flex justify-between" >
 
-            <div className="container-fluid" data-aos="fade-up">
-
-                <div className="section-header">
-                    <h2>Address</h2>
-                    <p>Come & Visit The <span >IKORC</span></p>
-                </div>
-
-                <div className="row g-0">
-                    <div className="col-lg-4 venue-map">
-                        <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18105.158454879886!2d49.491399043063325!3d34.014917323994254!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fecf34f00304ad5%3A0x89cdd29bc1b31bbb!2sArak%20Oil%20Refinery!5e1!3m2!1sen!2snl!4v1667321543608!5m2!1sen!2snl" ></iframe>
-                    </div>
-
-                    <div className="col-lg-8 venue-info hvr-shrink">
-                        <div className="row justify-content-center">
-                            <div className="position-relative">
-                                <i className="bi bi-geo-alt"></i>
-                                <h3>ARAK - 20km Borujerd Road</h3>
-                                <div className="social unitee ">
-                                    <a className="" href="#"><img loading="lazy" className="imgicon hvr-grow" src="./assets/images/icons/q6.png" alt="" /></a>
-                                    <a className="" href="#"><img loading="lazy" className="imgicon hvr-grow" src="./assets/images/icons/q1.png" alt="" /></a>
-                                    <a className="" href="#"><img loading="lazy" className="imgicon hvr-grow" src="./assets/images/icons/q2.png" alt="" /></a>
-                                    <a className="" href="#"><img loading="lazy" className="imgicon hvr-grow" src="./assets/images/icons/q3.png" alt="" /></a>
-                                </div>
-                            </div>
+                    <div className="w-[220px] p-5 border border-cyan-50/5 hover:border hover:border-yellow-500 hover:scale-110 bg-black/40 hover:bg-black/60 rounded-2xl cursor-pointer transition-all duration-300">
+                        <div className="flex flex-col justify-between items-center text-center">
+                            <FaEdgeLegacy className="text-rose-100 rounded-full text-7xl text-center" />
+                            <span className="text-sky-300 font-DanaB pt-2">وبسایت</span>
+                            <a className="text-rose-100 font-bold text-3xl font-sans pt-5" href="https://www.ikorc.ir/">IKORC.IR</a>
                         </div>
                     </div>
-                </div>
+                    <div className="w-[220px] p-5 border border-cyan-50/5 hover:border hover:border-yellow-500 hover:scale-110 bg-black/40 hover:bg-black/60 rounded-2xl cursor-pointer transition-all duration-300">
+                        <div className="flex flex-col justify-between items-center text-center">
+                            <FaPhoneVolume className="text-rose-100 rounded-full text-7xl text-center" />
+                            <span className="text-sky-300 font-DanaB pt-2">تلفن</span>
+                            <a className="text-rose-100 font-bold font-Dana text-xl pt-5 " href="https://www.ikorc.ir/">56563822 _ 086</a>
+                        </div>
+                    </div>
+                    <div className="w-[220px] p-5 border border-cyan-50/5 hover:border hover:border-yellow-500 hover:scale-110 bg-black/40 hover:bg-black/60 rounded-2xl cursor-pointer transition-all duration-300">
+                        <div className="flex flex-col justify-between items-center text-center">
+                            <FaInstagram className="text-rose-100 rounded-full text-7xl text-center" />
+                            <span className="text-sky-300 font-DanaB pt-2">اینستاگرام</span>
+                            <a className="text-rose-100 font-bold text-3xl font-sans pt-5" href="https://www.ikorc.ir/">IKORC1@</a>
+                        </div>
+                    </div>
+                    <div className="w-[220px] p-5 border border-cyan-50/5 hover:border hover:border-yellow-500 hover:scale-110 bg-black/40 hover:bg-black/60 rounded-2xl cursor-pointer transition-all duration-300">
+                        <div className="flex flex-col justify-between items-center text-center">
+                            <FaTelegramPlane className="text-rose-100 rounded-full text-7xl text-center" />
+                            <span className="text-sky-300 font-DanaB pt-2">تلگرام</span>
 
+                            <a className="text-rose-100 font-bold text-3xl font-sans pt-5" href="https://www.ikorc.ir/">IKORC1@</a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
         </section>

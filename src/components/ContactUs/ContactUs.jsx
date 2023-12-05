@@ -1,45 +1,54 @@
-import "./ContactUs.scss"
+import "./ContactUs.scss";
+import { FaEdgeLegacy } from "react-icons/fa";
+import { FaPhoneVolume } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { FaTelegramPlane } from "react-icons/fa";
 
 const ContactUs = () => {
     return (
-        <section id="contact" className="section-bg">
+        <>
 
-            <div className="container" data-aos="fade-up">
+            <h2 className="title-header w-1/4 mx-auto mb-[60px] pb-5 text-4xl text-center text-transparent  bg-clip-text bg-gradient-to-t from-rose-400 to-sky-600 font-MorabbaB">ارتبـــــــــــــــــــاط با مـــــا</h2>
+            <section id="contact" className="h-[400px] flex justify-center items-center mb-[60px] p-5 bg-cover overflow-hidden relative !bg-fixed grayscale-[70%]">
 
-                <div className="section-header">
-                    <h2>Contact Us</h2>
-                    <p ><span>IKORC</span> is ready to receive comments and suggestions from respected visitors.</p>
+                <div className="container flex justify-between" >
+
+                    <div className="w-[220px] p-5 border border-cyan-50/5 hover:border hover:border-yellow-500 hover:scale-110 bg-black/40 hover:bg-black/60 rounded-2xl cursor-pointer transition-all duration-300">
+                        <div className="flex flex-col justify-between items-center text-center">
+                            <FaEdgeLegacy className="text-rose-100 rounded-full text-7xl text-center" />
+                            <a className="text-rose-100 font-bold text-3xl font-sans pt-5" href="https://www.ikorc.ir/">IKORC.IR</a>
+                        </div>
+                    </div>
+                    <div className="w-[220px] p-5 border border-cyan-50/5 hover:border hover:border-yellow-500 hover:scale-110 bg-black/40 hover:bg-black/60 rounded-2xl cursor-pointer transition-all duration-300">
+                        <div className="flex flex-col justify-between items-center text-center">
+                            <FaPhoneVolume className="text-rose-100 rounded-full text-7xl text-center" />
+                            <a className="text-rose-100 font-bold font-Dana text-2xl pt-5" href="https://www.ikorc.ir/">08638225656</a>
+                        </div>
+                    </div>
+                    <div className="w-[220px] p-5 border border-cyan-50/5 hover:border hover:border-yellow-500 hover:scale-110 bg-black/40 hover:bg-black/60 rounded-2xl cursor-pointer transition-all duration-300">
+                        <div className="flex flex-col justify-between items-center text-center">
+                            <FaInstagram className="text-rose-100 rounded-full text-7xl text-center" />
+                            <a className="text-rose-100 font-bold text-3xl font-sans pt-5" href="https://www.ikorc.ir/">IKORC1@</a>
+                        </div>
+                    </div>
+                    <div className="w-[220px] p-5 border border-cyan-50/5 hover:border hover:border-yellow-500 hover:scale-110 bg-black/40 hover:bg-black/60 rounded-2xl cursor-pointer transition-all duration-300">
+                        <div className="flex flex-col justify-between items-center text-center">
+                            <FaTelegramPlane className="text-rose-100 rounded-full text-7xl text-center" />
+                            <a className="text-rose-100 font-bold text-3xl font-sans pt-5" href="https://www.ikorc.ir/">IKORC1@</a>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
                 </div>
-
-                <div className="row contact-info">
-
-                    <div className="col-md-4">
-                        <div className="contact-address">
-                            <i className="bi bi-browser-chrome"></i>
-                            <h3>Website</h3>
-                            <p><a href="https://www.ikorc.ir/">WWW.IKORC.IR</a></p>
-                        </div>
-                    </div>
-
-                    <div className="col-md-4">
-                        <div className="contact-phone">
-                            <i className="bi bi-telephone"></i>
-                            <h3>Phone Number</h3>
-                            <p><a href="tel:+988633674541">086-33674541</a></p>
-                        </div>
-                    </div>
-
-                    <div className="col-md-4">
-                        <div className="contact-email">
-                            <i className="bi bi-envelope"></i>
-                            <h3>Email</h3>
-                            <p><a href="info@ikorc.ir">info@ikorc.ir</a></p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
+            </section>
+        </>
     )
 }
 

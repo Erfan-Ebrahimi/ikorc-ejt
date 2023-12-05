@@ -1,57 +1,55 @@
 /* eslint-disable react/no-unescaped-entities */
+import { FaChevronLeft } from "react-icons/fa";
 import "./Footer.scss";
 
 const Footer = () => {
     return (
         <footer id="footer">
-            <div className="footer-top">
+            <div className="footer-top bg-slate-950 px-[30px] py-[60px]">
                 <div className="container">
-                    <div className="row">
+                    <div className="flex justify-between gap-5">
 
-                        <div className="col-lg-3 col-md-6 footer-info">
-                            <img loading="lazy" src="assets/img/logoo.png" alt="TheEvenet" />
-                            <p><span className="sp">IKORC</span> is one of the subsidiary companies of Iran's National Petroleum Products Refining and Distribution Company, which was launched as the largest single unit refinery in Iran in 1372 with a nominal capacity of 150,000 barrels per day. It is also the first refinery whose study and implementation work began after the Islamic Revolution and in the first year after the imposed war.</p>
+                        <div className="w-1/4 footer-info">
+                            <img className="h-10 mb-2" loading="lazy" src="assets/images/logoo.png" alt="TheEvenet" />
+                            <p className="text-sm/6 text-white font-DanaB"><span className="text-sm/6 text-red-500 font-DanaB">  پالایشگاه امام خمینی شازند </span>یکی از شرکت های تابعه شرکت ملی پالایش و پخش فرآورده های نفتی ایران است که به عنوان بزرگترین پالایشگاه تک واحدی ایران در سال ۱۳۷۲ با ظرفیت اسمی ۱۵۰ هزار بشکه در روز راه اندازی شد. همچنین اولین پالایشگاهی است که کار مطالعات و اجرای آن پس از انقلاب اسلامی و در سال اول پس از جنگ تحمیلی آغاز شد.</p>
                         </div>
 
-                        <div className="col-lg-3 col-md-6 footer-links">
-                            <h4>Links</h4>
+                        <div className="w-1/4 footer-links">
+                            <h4 className=" font-MorabbaB">لینک های مرتبط</h4>
                             <ul>
-                                <li><i className="bi bi-chevron-right"></i> <a href="https://farsi.khamenei.ir/">Leader.ir</a></li>
-                                <li><i className="bi bi-chevron-right"></i> <a href="https://www.president.ir/">President.ir</a></li>
-                                <li><i className="bi bi-chevron-right"></i> <a href="https://www.mop.ir/">Oil Ministry</a></li>
-                                <li><i className="bi bi-chevron-right"></i> <a href="www.saamad.ir">SAAMAD system</a></li>
-                                <li><i className="bi bi-chevron-right"></i> <a href="http://www.niordc.ir/">Distiribiution Company</a></li>
-                                <li><i className="bi bi-chevron-right"></i> <a href="https://www.put.ac.ir/">Petroleum University</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="https://farsi.khamenei.ir/">دفتر مقام معظم رهبری</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="https://www.president.ir/">دفتر ریاست جمهوری</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="https://www.mop.ir/">وزارت نفت</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="www.saamad.ir">سامانه سماد</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="http://www.niordc.ir/">شرکت ملی پالایش و پخش</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="https://www.put.ac.ir/">دانشگاه نفت</a></li>
                             </ul>
                         </div>
 
-                        <div className="col-lg-3 col-md-6 footer-links">
-                            <h4>MENU</h4>
+                        <div className="w-1/4 footer-links">
+                            <h4 className=" font-MorabbaB">منو</h4>
                             <ul>
-                                <li><i className="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
-                                <li><i className="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
-                                <li><i className="bi bi-chevron-right"></i> <a href="#speakers">UNITS</a></li>
-                                <li><i className="bi bi-chevron-right"></i> <a href="https://www.ikorc.ir/pr">Public relations</a></li>
-                                <li><i className="bi bi-chevron-right"></i> <a href="https://www.ikorc.ir/faq">Terms of service</a></li>
-                                <li><i className="bi bi-chevron-right"></i> <a href="https://www.ikorc.ir/faq">Privacy policy</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="#hero">خانه</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="#about">خدمات</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="#speakers">رزرو سینما</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="https://www.ikorc.ir/pr">کتابخانه</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="https://www.ikorc.ir/faq">قوانین سایت</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="https://www.ikorc.ir/faq">سیاست حفظ حریم خصوصی</a></li>
                             </ul>
                         </div>
 
-                        <div className="col-lg-3 col-md-6 footer-contact">
-                            <h4>Contact Us</h4>
-                            <p>
-                                ARAK
-                                20 kilometer of Borujerd road
-                                <strong>Phone :</strong> 086-33674541
-                                <strong>Email :</strong> info@ikorc.ir
-                            </p>
+                        <div className="w-1/4 footer-contact">
+                            <h4 className="font-DanaB">ارتباط با ما</h4>
+                            <p className="font-Dana">شهر مهاجران منطقه C</p>
+                            <p className="font-DanaM">ایمیل : <span className="">ikorc1@gmail.com</span></p>
+                            <p className="font-DanaM">تلفن : <span>38225656</span></p>
 
-                            <div className="social-links">
+                            {/* <div className="social-links">
                                 <a href="https://eitaa.com/ikorc_ir"><i><img loading="lazy" src="./assets/img/icons/103-GraFa-4.png" alt="" /></i></a>
                                 <a href="https://www.instagram.com/ikorc_ir/" className="instagram"><i className="bi bi-instagram"></i></a>
                                 <a href="https://telegram.me/ikorc" className="google-plus"><i className="bi bi-telegram"></i></a>
                                 <a href="#" className="linkedin"><i className="bi bi-linkedin"></i></a>
-                            </div>
+                            </div> */}
 
                         </div>
 

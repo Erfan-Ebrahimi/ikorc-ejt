@@ -1,11 +1,24 @@
 #gallery img {
-  filter: grayscale(50%);
   transition: all 1s ease-out;
   border-radius: 20px;
 }
-#gallery img:hover {
-  box-shadow: 1px 1px 1px blue;
-  transition: all 1s ease-out;
-  scale: 90%;
-  filter: grayscale(20%);
+
+.swiper-pagination{
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 40px;
 }
+#gallery .swiper-pagination .swiper-pagination-bullet {
+  border-radius: 50%;
+  width: 12px !important;
+  height: 12px !important;
+  background-color: rgba(112, 114, 224, 0.37);
+  opacity: 1;
+  border: 1px solid rgb(208, 235, 6);
+}
+
+#gallery .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: rgb(183, 50, 50);
+}
+

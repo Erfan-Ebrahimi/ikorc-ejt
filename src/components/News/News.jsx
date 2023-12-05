@@ -1,5 +1,5 @@
 import NewsCard from "../NewsCard/NewsCard"
-import { Navigation, Autoplay, Pagination } from 'swiper/modules';
+import { Navigation, Autoplay, Pagination} from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import 'swiper/css';
@@ -14,9 +14,10 @@ const News = () => {
 
         <Swiper
           className="mySwiper"
-          modules={[Navigation, Autoplay,Pagination]}
+          modules={[Navigation, Autoplay, Pagination]}
           slidesPerView={2}
           spaceBetween={20}
+          speed={1500}
           pagination={true}
           scrollbar={{ draggable: true }}
           loop={true}
@@ -65,9 +66,9 @@ const News = () => {
           <SwiperSlide>
             <NewsCard img="4" title="همایش بسیجیان" desc="همایش بسیجیان در شرکت پالایش نفت امام خمینی (ره) شازند برگزار شد." date="1402/09/08" author="حسین محمدشاهی" />
           </SwiperSlide>
-         
+
         </Swiper>
-        
+
         {/* <Pagination/> */}
       </div>
 
