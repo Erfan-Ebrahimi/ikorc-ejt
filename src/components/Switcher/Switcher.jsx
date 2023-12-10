@@ -23,8 +23,8 @@ export default function Switcher({ cSun, cMoon, content, size }) {
                 <DarkModeSwitch
                     checked={darkSide}
                     onChange={toggleDarkMode}
-                    moonColor={cMoon}
-                    sunColor={cSun}
+                    moonColor={"#f14144"}
+                    sunColor={"#fef222"}
                     size={size}
                 />
                 {

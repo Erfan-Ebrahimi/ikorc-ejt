@@ -7,14 +7,14 @@ const Footer = () => {
         <footer id="footer">
             <div className="footer-top bg-slate-950 px-[30px] py-[60px]">
                 <div className="container">
-                    <div className="flex justify-between gap-5">
-
-                        <div className="w-1/4 footer-info">
-                            <img className="h-10 mb-2" loading="lazy" src="assets/images/logoo.png" alt="TheEvenet" />
-                            <p className="text-sm/6 text-white font-DanaB"><span className="text-sm/6 text-red-500 font-DanaB">  پالایشگاه امام خمینی شازند </span>یکی از شرکت های تابعه شرکت ملی پالایش و پخش فرآورده های نفتی ایران است که به عنوان بزرگترین پالایشگاه تک واحدی ایران در سال ۱۳۷۲ با ظرفیت اسمی ۱۵۰ هزار بشکه در روز راه اندازی شد. همچنین اولین پالایشگاهی است که کار مطالعات و اجرای آن پس از انقلاب اسلامی و در سال اول پس از جنگ تحمیلی آغاز شد.</p>
+                    <div className="flex flex-col md:flex-row justify-between gap-5">
+                        
+                        <div className="w-full md:w-1/4 footer-info">
+                            <img className="mx-auto md:mx-1 h-10 mb-2" loading="lazy" src="assets/images/logoo.png" alt="TheEvenet" />
+                            <p className="text-sm/6 text-justify md:text-right text-white font-DanaB"><span className="text-sm/6 text-red-500 font-DanaB">  پالایشگاه امام خمینی شازند </span>یکی از شرکت های تابعه شرکت ملی پالایش و پخش فرآورده های نفتی ایران است که به عنوان بزرگترین پالایشگاه تک واحدی ایران در سال ۱۳۷۲ با ظرفیت اسمی ۱۵۰ هزار بشکه در روز راه اندازی شد. همچنین اولین پالایشگاهی است که کار مطالعات و اجرای آن پس از انقلاب اسلامی و در سال اول پس از جنگ تحمیلی آغاز شد.</p>
                         </div>
 
-                        <div className="w-1/4 footer-links">
+                        <div className="w-full md:w-1/4 footer-links">
                             <h4 className=" font-MorabbaB">لینک های مرتبط</h4>
                             <ul>
                                 <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="https://farsi.khamenei.ir/">دفتر مقام معظم رهبری</a></li>
@@ -26,7 +26,7 @@ const Footer = () => {
                             </ul>
                         </div>
 
-                        <div className="w-1/4 footer-links">
+                        <div className="w-full md:w-1/4 footer-links">
                             <h4 className=" font-MorabbaB">منو</h4>
                             <ul>
                                 <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="#hero">خانه</a></li>
@@ -38,19 +38,11 @@ const Footer = () => {
                             </ul>
                         </div>
 
-                        <div className="w-1/4 footer-contact">
+                        <div className="w-full md:w-1/4 footer-contact">
                             <h4 className="font-DanaB">ارتباط با ما</h4>
                             <p className="font-Dana">شهر مهاجران منطقه C</p>
                             <p className="font-DanaM">ایمیل : <span className="">ikorc1@gmail.com</span></p>
                             <p className="font-DanaM">تلفن : <span>38225656</span></p>
-
-                            {/* <div className="social-links">
-                                <a href="https://eitaa.com/ikorc_ir"><i><img loading="lazy" src="./assets/img/icons/103-GraFa-4.png" alt="" /></i></a>
-                                <a href="https://www.instagram.com/ikorc_ir/" className="instagram"><i className="bi bi-instagram"></i></a>
-                                <a href="https://telegram.me/ikorc" className="google-plus"><i className="bi bi-telegram"></i></a>
-                                <a href="#" className="linkedin"><i className="bi bi-linkedin"></i></a>
-                            </div> */}
-
                         </div>
 
                     </div>
@@ -58,8 +50,12 @@ const Footer = () => {
             </div>
 
             <div className="container">
-                <div className="copyright text-red-200">
-                    &copy; Copyright <span>IKORC</span> All Rights Reserved.
+                <div className="text-center mt-2 text-white font-DanaB text-sm">
+                    &copy; تمامی حقوق این وبسایت متعلق به{" "}
+                    <span className="text-red-500">{" "}
+                    باشگاه خدمات اجتماعی{" "}
+                    </span>
+                    می باشد.
                 </div>
             </div>
         </footer>

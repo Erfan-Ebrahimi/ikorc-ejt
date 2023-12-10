@@ -63,20 +63,6 @@
     background: #020537;
   }
 
-  a {
-    color: #f82249;
-    text-decoration: none;
-    transition: 0.5s;
-  }
-
-  a:hover,
-  a:active,
-  a:focus {
-    color: #23f8f5;
-    outline: none;
-    text-decoration: none;
-  }
-
   .title-header {
     border-top: none !important;
     border-left: none !important;
@@ -86,11 +72,13 @@
     border-width: 4px;
     border-image-source: radial-gradient(
       circle,
-      rgba(34, 193, 195, 0.7) 3%,
-      rgba(222, 97, 97, 0.698) 100%
+      rgb(139, 10, 10) 3%,
+      rgba(239, 2, 2, 0.4) 100%
     );
   }
 }
+
+// ------------------------------- SWAL -----------------------------------//
 .swal2-title {
   color: rgb(0, 148, 42) !important;
   font-size: 1.5rem;
@@ -147,4 +135,13 @@
 .swal2-input {
   color: rgb(255, 242, 0) !important;
   font-family: "Dana" !important;
+}
+
+//------------------------------SWIPER-------------------------------//
+
+.swiper-button-next {
+  @apply flex justify-center items-center mx-auto w-[30px] h-[30px] md:w-10 md:h-10 absolute left-14 md:left-24 bg-white dark:bg-zinc-600 hover:bg-gray-300 dark:hover:bg-white dark:child-hover:fill-zinc-700  rounded-full duration-500 shadow-lg z-0;
+}
+.swiper-button-prev {
+  @apply flex justify-center items-center mx-auto w-[30px] h-[30px] md:w-10 md:h-10 absolute left-12 md:left-11 bg-white dark:bg-zinc-600 hover:bg-gray-300 dark:hover:bg-white dark:child-hover:fill-zinc-700 rounded-full duration-500 shadow-lg z-0;
 }

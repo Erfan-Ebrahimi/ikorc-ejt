@@ -1,24 +1,48 @@
 import NewsCard from "../NewsCard/NewsCard"
-import { Navigation, Autoplay, Pagination} from 'swiper/modules';
+import { Navigation, Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
+import { ChevronLeftIcon } from "@heroicons/react/20/solid";
+import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
 import 'swiper/css';
 // import "swiper/navigation"
 
 const News = () => {
   return (
-    <section className="">
-      <h2 className="title-header w-1/4 mx-auto mb-5 pb-5 text-4xl text-center text-transparent  bg-clip-text bg-gradient-to-t from-rose-400 to-sky-600 font-MorabbaB">آخــــرین اخــــــــبار</h2>
+    <section className="mt-20">
+
+      <div className="container mx-auto w-1/2 text-center">
+        <h2 className="text-2xl md:text-5xl font-MorabbaM text-zink-700 text-transparent  bg-clip-text bg-gradient-to-t from-rose-100 to-sky-600 dark:text-white">آخرین اخبار</h2>
+        <span className="inline-block text-lg md:text-3xl font-Morabba mt-0.5 md:mt-1.5 border-b border-red-500 pb-4 text-white">سر تیتر خبرهای مهم</span>
+      </div>
+      <div className="">
+
+
+
+        <div className="transition-colors relative hidden md:flex duration-300 mb-5 md:mb-3">
+          <div className="swiper-button-prev" >
+            <ChevronLeftIcon className="w-5 h-5 fill-zinc-600" />
+          </div>
+          <div className="swiper-button-next" >
+            <ChevronRightIcon className="w-5 h-5 fill-zinc-600 dark:fill-white" />
+          </div>
+        </div>
+
+
+      </div>
+
+
 
       <div className="container mt-[60px]">
 
         <Swiper
-          className="mySwiper"
+          className="mySwiper mx-auto"
           modules={[Navigation, Autoplay, Pagination]}
           slidesPerView={2}
           spaceBetween={20}
           speed={1500}
           pagination={true}
+          // centeredSlides={true}
           scrollbar={{ draggable: true }}
           loop={true}
           autoplay={{
@@ -27,19 +51,19 @@ const News = () => {
           }}
           breakpoints={{
             330: {
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetween: 5
             },
             480: {
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetween: 16
             },
             640: {
-              slidesPerView: 3,
+              slidesPerView: 1,
               spaceBetween: 16
             },
             768: {
-              slidesPerView: 3,
+              slidesPerView: 1,
               spaceBetween: 20
             },
 
@@ -52,6 +76,7 @@ const News = () => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           }}
+
         >
 
           <SwiperSlide>
