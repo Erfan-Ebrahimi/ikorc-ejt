@@ -14,7 +14,7 @@ const Actions = () => {
 
 
 
-      <div className="flex flex-wrap mx-auto w-full justify-center mt-10 gap-y-5 md:gap-10">
+      <div className="flex flex-wrap mx-auto w-[90%] md:w-full justify-center mt-10 gap-y-5 md:gap-10">
 
         <ActionCard title={'مسابقات شطرنج'} desc={'کسب مقام اول تیمی در مسابقات آزاد هیات شطرنج شازند توسط تیم شطرنج پالایشگاه امام خمینی'} date={'1402/03/01'} img={1} />
         <ActionCard title={'برگزاری مسابقات پیش کسوتان '} desc={'میزبانی پالایشگاه امام خمینی شازند از مسابقات فوتبال پیش کسوتان استان مرکزی'} date={'1402/04/12'} img={2} />

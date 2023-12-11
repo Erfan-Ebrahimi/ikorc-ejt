@@ -15,9 +15,6 @@ const News = () => {
         <span className="inline-block text-lg md:text-3xl font-Morabba mt-0.5 md:mt-1.5 border-b border-red-500 pb-4 text-white">تیتر خبرهای جاری</span>
       </div>
       <div className="">
-
-
-
         <div className="transition-colors relative hidden md:flex duration-300 mb-5 md:mb-3">
           <div className="swiper-button-prev" >
             <ChevronLeftIcon className="w-8 h-8 fill-zinc-600 dark:fill-yellow-500" />
@@ -26,8 +23,6 @@ const News = () => {
             <ChevronRightIcon className="w-8 h-8 fill-zinc-600 dark:fill-yellow-500" />
           </div>
         </div>
-
-
       </div>
 
 
@@ -50,11 +45,11 @@ const News = () => {
           breakpoints={{
             330: {
               slidesPerView: 1,
-              spaceBetween: 5
+              spaceBetween: 20
             },
             480: {
               slidesPerView: 1,
-              spaceBetween: 16
+              spaceBetween: 6
             },
             640: {
               slidesPerView: 1,
@@ -66,8 +61,12 @@ const News = () => {
             },
 
             1024: {
+              slidesPerView: 2,
+              spaceBetween: 10
+            },
+            1300: {
               slidesPerView: 3,
-              spaceBetween: 40
+              spaceBetween: 10
             }
           }}
           navigation={{

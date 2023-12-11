@@ -11,7 +11,7 @@ const Address = () => {
         <section id="address">
             <div className="address py-[10px] !bg-cover rounded-lg grayscale-[0%] bg-center !bg-fixed ">
                 <h3 className="relative overflow-hidden add-tit text-red-100 border-x-4 border-rose-600 max-w-max mx-auto bg-black/40 p-5 mb-2  text-center text-xl md:text-4xl font-MorabbaM">شهر مهاجران _ منطقه C _  باشگاه خدمات اجتماعی پالایشگاه شازند</h3>
-                <div className=" container w-1/2 flex justify-center mx-auto gap-x-0 flex-wrap md:flex-nowrap " >
+                <div className=" container md:w-1/2 flex justify-center mx-auto gap-x-0 flex-wrap md:flex-nowrap " >
 
                     <a href="https://eitaa.com/ikorc_ir" rel="noreferrer" target="_blank" className="w-20 md:w-[100px] px-5 py-2 text-center mx-auto flex justify-center border border-cyan-50/5 hover:border hover:border-yellow-500 hover:scale-110 bg-slate-950/90 hover:bg-black/60 rounded-2xl cursor-pointer transition-all duration-300">
                         <svg className="w-20 -4xl md:text-7xl text-center fill-red-500" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

@@ -21,10 +21,11 @@ const Pictures = () => {
 
 
             <Swiper
-                className="mySwiper"
+                className="mySwiper mr-5 md:mr-0"
                 modules={[Autoplay, Pagination, EffectCoverflow]}
                 slidesPerView={2}
                 dir='rtl'
+                // width={100}
                 spaceBetween={20}
                 pagination={{ clickable: true }}
                 speed={2000}
@@ -47,10 +48,10 @@ const Pictures = () => {
                 breakpoints={{
                     330: {
                         slidesPerView: 1,
-                        spaceBetween: 5
+                        spaceBetween: 16
                     },
                     480: {
-                        slidesPerView: 2,
+                        slidesPerView: 1,
                         spaceBetween: 16
                     },
                     640: {
@@ -113,7 +114,7 @@ const Pictures = () => {
                 </SwiperSlide>
             </Swiper>
 
-            <div className="flex flex-col md:flex-row  justify-center items-center mt-20 gap-5">
+            <div className=" container flex flex-col md:flex-row  justify-center items-center mt-20 gap-5">
                 <Link to='/pics' className='archive hover:scale-95 duration-300 transition-all w-full md:w-3/4 h-[100px] md:h-[200px] flex flex-col justify-center items-center rounded-xl overflow-hidden border border-red-400'>
                     <Link to="/pics" className=" text-center mr-5 text-white text-sm md:text-3xl md:px-1 font-MorabbaB rounded-xl hover:text-white  transition-all duration-300 z-30">آرشیو تصاویر</Link>
                     <Link to="/pics" className=" text-center mr-5 text-white text-sm md:text-xl md:px-1 font-MorabbaB rounded-xl hover:text-white  transition-all duration-300 z-30">قدیمی و جدید</Link>

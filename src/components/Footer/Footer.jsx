@@ -13,6 +13,14 @@ const Footer = () => {
         });
     }
 
+    const showM = () => {
+        Swal.fire({
+          imageUrl: "./assets/images/ME.webp",
+          imageHeight: 350,
+          text: "__طراحی و کدنویسی : محمد ابراهیمی__",
+        });
+      }
+
 
     return (
         <footer id="footer">
@@ -28,24 +36,24 @@ const Footer = () => {
                         <div className="w-full md:w-1/4 footer-links">
                             <h4 className=" font-MorabbaB">لینک های مرتبط</h4>
                             <ul>
-                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="https://farsi.khamenei.ir/">دفتر مقام معظم رهبری</a></li>
-                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="https://www.president.ir/">دفتر ریاست جمهوری</a></li>
-                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="https://www.mop.ir/">وزارت نفت</a></li>
-                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="www.saamad.ir">سامانه سماد</a></li>
-                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="http://www.niordc.ir/">شرکت ملی پالایش و پخش</a></li>
-                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="https://www.put.ac.ir/">دانشگاه نفت</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" target="_blank" rel="noreferrer" href="https://farsi.khamenei.ir/">دفتر مقام معظم رهبری</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" target="_blank" rel="noreferrer" href="https://www.president.ir/">دفتر ریاست جمهوری</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" target="_blank" rel="noreferrer" href="https://www.mop.ir/">وزارت نفت</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" target="_blank" rel="noreferrer" href="https://www.saamad.ir">سامانه سماد</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" target="_blank" rel="noreferrer" href="http://www.niordc.ir/">شرکت ملی پالایش و پخش</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" target="_blank" rel="noreferrer" href="https://www.put.ac.ir/">دانشگاه نفت</a></li>
                             </ul>
                         </div>
 
                         <div className="w-full md:w-1/4 footer-links">
                             <h4 className=" font-MorabbaB">منو</h4>
                             <ul>
-                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="#hero">خانه</a></li>
-                                <li className="flex items-center text-lg text-red-600" onClick={showChart}><FaChevronLeft /> <a className="text-base font-DanaM" href="#about">چارت سازمانی</a></li>
-                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="#speakers">رزرو سینما</a></li>
-                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="https://www.ikorc.ir/pr">کتابخانه</a></li>
-                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="https://www.ikorc.ir/faq">قوانین سایت</a></li>
-                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="https://www.ikorc.ir/faq">سیاست حفظ حریم خصوصی</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" href="#">خانه</a></li>
+                                <li className="flex items-center text-lg text-red-600" onClick={showChart}><FaChevronLeft /> <a className="text-base font-DanaM" href="#">چارت سازمانی</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" target="_blank" rel="noreferrer" href="#">رزرو سینما</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" target="_blank" rel="noreferrer" href="https://www.ikorc.ir/">کتابخانه</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" target="_blank" rel="noreferrer" href="https://www.ikorc.ir/">قوانین سایت</a></li>
+                                <li className="flex items-center text-lg text-red-600"><FaChevronLeft /> <a className="text-base font-DanaM" target="_blank" rel="noreferrer" href="https://www.ikorc.ir/">سیاست حفظ حریم خصوصی</a></li>
                             </ul>
                         </div>
 
@@ -54,7 +62,7 @@ const Footer = () => {
                             <p className="font-Dana">شهر مهاجران منطقه C</p>
                             <p className="font-DanaM">ایمیل : <span className="">ikorc1@gmail.com</span></p>
                             <p className="font-DanaM">تلفن : <span>38225656</span></p>
-                            <div className=" w-[300px] md:mt-10">
+                            <div className="mx-auto md:w-[300px] md:mt-10">
                                 <img src="./assets/images/1402.png" alt="" />
                             </div>
                         </div>
@@ -64,14 +72,24 @@ const Footer = () => {
 
             </div>
 
-            <div className="container">
-                <div className="text-center mt-2 text-white font-DanaB text-sm">
-                    &copy; تمامی حقوق این وبسایت متعلق به{" "}
+            <div onClick={showM} className="md:container flex flex-col justify-center items-center">
+            <div className="text-center cursor-pointer mt-2 pb-2 text-white font-DanaB text-xs md:text-xl">
+                     تمامی حقوق این وبسایت متعلق به{" "}
                     <span className="text-red-500">{" "}
                         باشگاه خدمات اجتماعی{" "}
                     </span>
-                    می باشد.
+                    می باشد.&copy;
                 </div>
+                <div className="pt-2 pb-4 border-t-2 border-red-500/30">
+                    <a href="#" className="flex items-center gap-x-5">
+                        <p className="text- font-MorabbaM">طراحی و کد نویسی</p>
+                        <a>
+                            <img  src="./assets/images/ME.webp" className="w-6 rounded-" alt="" />
+                        </a>
+                    </a>
+                </div>
+                
+
             </div>
         </footer>
     )
