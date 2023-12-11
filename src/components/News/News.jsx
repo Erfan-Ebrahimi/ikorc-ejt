@@ -5,7 +5,6 @@ import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
 import 'swiper/css';
-// import "swiper/navigation"
 
 const News = () => {
   return (
@@ -13,7 +12,7 @@ const News = () => {
 
       <div className="container mx-auto w-1/2 text-center">
         <h2 className="text-2xl md:text-5xl font-MorabbaM text-zink-700 text-transparent  bg-clip-text bg-gradient-to-t from-rose-100 to-sky-600 dark:text-white">آخرین اخبار</h2>
-        <span className="inline-block text-lg md:text-3xl font-Morabba mt-0.5 md:mt-1.5 border-b border-red-500 pb-4 text-white">سر تیتر خبرهای مهم</span>
+        <span className="inline-block text-lg md:text-3xl font-Morabba mt-0.5 md:mt-1.5 border-b border-red-500 pb-4 text-white">تیتر خبرهای جاری</span>
       </div>
       <div className="">
 
@@ -21,10 +20,10 @@ const News = () => {
 
         <div className="transition-colors relative hidden md:flex duration-300 mb-5 md:mb-3">
           <div className="swiper-button-prev" >
-            <ChevronLeftIcon className="w-5 h-5 fill-zinc-600" />
+            <ChevronLeftIcon className="w-8 h-8 fill-zinc-600 dark:fill-yellow-500" />
           </div>
           <div className="swiper-button-next" >
-            <ChevronRightIcon className="w-5 h-5 fill-zinc-600 dark:fill-white" />
+            <ChevronRightIcon className="w-8 h-8 fill-zinc-600 dark:fill-yellow-500" />
           </div>
         </div>
 
@@ -42,7 +41,6 @@ const News = () => {
           spaceBetween={20}
           speed={1500}
           pagination={true}
-          // centeredSlides={true}
           scrollbar={{ draggable: true }}
           loop={true}
           autoplay={{
@@ -80,16 +78,16 @@ const News = () => {
         >
 
           <SwiperSlide>
-            <NewsCard img="1" title="بازدید اساتید دانشگاه" desc="اساتید هیئت علمی و کارشناسان دانشگاه آیت الله العظمی بروجردی (ره) شهر بروجرد از شرکت پالایش نفت امام خمینی (ره) شازند بازدید کردند." date="1402/08/25" author="حسین محمدشاهی" />
+            <NewsCard img="1" title="برگزاری المپیاد جوانان" desc="میزبانی شرکت پخش و پالایش نفت شازند از المپیاد ورزشی فرزندان ذکور کارکنان زیر 25 سال کشور" date="1402/08/25" author="حسین محمدشاهی" />
           </SwiperSlide>
           <SwiperSlide>
-            <NewsCard img="2" title="همایش تعالی خانواده" desc="همایش بزرگ “تعالی خانواده با محوریت تربیت فرزند” در شرکت پالایش نفت امام خمینی (ره) شازند برگزار شد." date="1402/09/07" author="حسین محمدشاهی" />
+            <NewsCard img="2" title="همایش تعالی خانواده" desc="همایش بزرگ “تعالی خانواده با محوریت تربیت فرزند” به همت باشگاه خدمات اجتماعی شرکت پالایش نفت امام خمینی (ره) شازند در سالن ستارگان برگزار شد." date="1402/09/07" author="حسین محمدشاهی" />
           </SwiperSlide>
           <SwiperSlide>
-            <NewsCard img="3" title="نمایشگاه صنعت" desc="شرکت پالایش نفت امام خمینی(ره) شازند در شانزدهمین نمایشگاه صنعت استان مرکزی پذیرای کارشناسان ، صنعتگران و علاقه مندان است." date="1402/09/12" author="حسین محمدشاهی" />
+            <NewsCard img="3" title="اردوی زیارتی" desc="برگزاری اردوی یک روزه زیارتی قم با حضور خانواده کارکنان شرکت پخش و پالایش نفت شازند به همت باشگاه خدمات اجتماعی." date="1402/09/12" author="حسین محمدشاهی" />
           </SwiperSlide>
           <SwiperSlide>
-            <NewsCard img="4" title="همایش بسیجیان" desc="همایش بسیجیان در شرکت پالایش نفت امام خمینی (ره) شازند برگزار شد." date="1402/09/08" author="حسین محمدشاهی" />
+            <NewsCard img="4" title="برگزاری مسابقات کشتی" desc="میزبانی شرکت پخش و پالایش نفت شازند از مسابقات کشتی فرزندان کارکنان رده سنی جوانان" date="1402/09/08" author="حسین محمدشاهی" />
           </SwiperSlide>
 
         </Swiper>

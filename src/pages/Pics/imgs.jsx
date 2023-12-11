@@ -1,0 +1,111 @@
+
+export const images = [
+    {
+        src: "./assets/images/pics/f1.jpg",
+        orginal:"./assets/images/pics/f1.jpg",
+        width: 1500,
+        height: 900,
+    },
+    {
+        src: "./assets/images/pics/f2.jpg",
+        orginal:"./assets/images/pics/f2.jpg",
+        width: 1500,
+        height: 700,
+    },
+    {
+        src: "./assets/images/pics/f3.jpg",
+        orginal:"./assets/images/pics/f3.jpg",
+        width: 1500,
+        height: 900,
+    },
+    {
+        src: "./assets/images/pics/f4.jpg",
+        orginal:"./assets/images/pics/f4.jpg",
+        width: 1500,
+        height: 600,
+    },
+    {
+        src: "./assets/images/pics/f5.jpg",
+        orginal:"./assets/images/pics/f5.jpg",
+        width: 1500,
+        height: 900,
+    },
+    {
+        src: "./assets/images/pics/f6.jpg",
+        orginal:"./assets/images/pics/f6.jpg",
+        width: 1500,
+        height: 900,
+    },
+    {
+        src: "./assets/images/pics/f7.jpg",
+        orginal:"./assets/images/pics/f7.jpg",
+        width: 1500,
+        height: 900,
+    },
+    {
+        src: "./assets/images/pics/f8.jpg",
+        orginal:"./assets/images/pics/f8.jpg",
+        width: 1500,
+        height: 900,
+    },
+    {
+        src: "./assets/images/pics/f9.jpg",
+        orginal:"./assets/images/pics/f9.jpg",
+        width: 1500,
+        height: 700,
+    },
+    {
+        src: "./assets/images/pics/f10.jpg",
+        orginal:"./assets/images/pics/f10.jpg",
+        width: 1500,
+        height: 700,
+    },
+    {
+        src: "./assets/images/pics/f11.JPG",
+        orginal:"./assets/images/pics/f11.JPG",
+        width: 1500,
+        height: 800,
+    },
+    {
+        src: "./assets/images/pics/f12.jpg",
+        orginal:"./assets/images/pics/f12.jpg",
+        width: 1500,
+        height: 700,
+    },
+    {
+        src: "./assets/images/pics/f13.jpg",
+        orginal:"./assets/images/pics/f13.jpg",
+        width: 1500,
+        height: 900,
+    },
+    {
+        src: "./assets/images/pics/f14.jpg",
+        orginal:"./assets/images/pics/f14.jpg",
+        width: 1500,
+        height: 900,
+    },
+    {
+        src: "./assets/images/pics/f15.jpg",
+        orginal:"./assets/images/pics/f15.jpg",
+        width: 1500,
+        height: 700,
+    },
+    {
+        src: "./assets/images/pics/f16.jpg",
+        orginal:"./assets/images/pics/f16.jpg",
+        width: 1500,
+        height: 800,
+    },
+    {
+        src: "./assets/images/pics/f17.jpg",
+        orginal:"./assets/images/pics/f17.jpg",
+        width: 1500,
+        height: 700,
+    },
+    {
+        src: "./assets/images/pics/f18.jpg",
+        orginal:"./assets/images/pics/f18.jpg",
+        width: 1500,
+        height: 700,
+    },
+];

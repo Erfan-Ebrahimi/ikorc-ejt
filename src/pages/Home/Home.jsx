@@ -5,6 +5,7 @@ import Actions from "../../components/Actions/Actions";
 import Landing from "../../components/Landing/Landing";
 import News from "../../components/News/News";
 import Services from "../../components/Services/Services";
+import Shahid from "../../components/Shahid/Shahid";
 
 
 
@@ -29,6 +30,7 @@ const Home = () => {
         <Actions />
         <Services />
         <Pictures />
+        <Shahid/>
         <Address />
       </div>
       <Footer />

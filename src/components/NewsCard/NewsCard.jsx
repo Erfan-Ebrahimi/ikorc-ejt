@@ -5,8 +5,8 @@ import "./NewsCard.scss"
 const NewsCard = ({ img, title, desc, date, author }) => {
   return (
     <div className="flex flex-col w-[320px] mr-4 md:w-[380px] bg-zinc-800 rounded-2xl overflow-hidden cursor-pointer hover:scale-90 hover:bg-zinc-600 duration-300">
-      <Link to='' className="w-[400px] h-[200px] overflow-hidden border border-emerald-600">
-        <img className="w-full grayscale-[70%] hover:grayscale-[10%]" src={`./assets/images/news/${img}.jpg`} alt="new-img" />
+      <Link to='' className="w-[380px]  overflow-hidden border border-emerald-600">
+        <img className="w-[380px] h-[200px] grayscale-[50%]  hover:grayscale-[10%]" src={`./assets/images/news/${img}.jpg`} alt="new-img" />
       </Link>
       <div className="mt-2 text-white">
         <h3 className="font-DanaB text-sm text-yellow-100 text-center bg-teal-700 max-w-max mx-auto py-1 px-2 rounded-lg">{title}</h3>

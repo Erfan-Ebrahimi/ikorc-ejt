@@ -1,4 +1,4 @@
-import {Autoplay, Pagination, EffectCoverflow } from 'swiper/modules';
+import { Autoplay, Pagination, EffectCoverflow } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 
@@ -71,31 +71,23 @@ const Pictures = () => {
             >
 
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/20.jpg" alt="" />
+                    <img src="./assets/images/gallery/1.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/22.JPG" alt="" />
+                    <img src="./assets/images/gallery/2.jpg" alt="" />
+                </SwiperSlide>
+               
+                <SwiperSlide>
+                    <img src="./assets/images/gallery/4.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/3.jpg" alt="" />
+                    <img src="./assets/images/gallery/5.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/23.JPG" alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="./assets/images/gallery/5.webp" alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="./assets/images/gallery/6.webp" alt="" />
+                    <img src="./assets/images/gallery/6.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src="./assets/images/gallery/7.jpg" alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="./assets/images/gallery/8.jpg" alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="./assets/images/gallery/9.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src="./assets/images/gallery/10.jpg" alt="" />
@@ -106,21 +98,25 @@ const Pictures = () => {
                 <SwiperSlide>
                     <img src="./assets/images/gallery/12.jpg" alt="" />
                 </SwiperSlide>
+
                 <SwiperSlide>
                     <img src="./assets/images/gallery/13.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/14.jpg" alt="" />
+                    <img src="./assets/images/gallery/16.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/16.jpg" alt="" />
+                    <img src="./assets/images/gallery/17.jpg" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="./assets/images/gallery/18.jpg" alt="" />
                 </SwiperSlide>
             </Swiper>
 
             <div className="flex flex-col md:flex-row  justify-center items-center mt-20 gap-5">
-                <Link className='archive hover:scale-95 duration-300 transition-all w-full md:w-3/4 h-[100px] md:h-[200px] flex flex-col justify-center items-center rounded-xl overflow-hidden border border-red-400'>
-                    <Link href="/" className=" text-center mr-5 text-white text-sm md:text-3xl md:px-1 font-MorabbaB rounded-xl hover:text-white  transition-all duration-300 z-30">آرشیو تصاویر</Link>
-                    <Link href="/" className=" text-center mr-5 text-white text-sm md:text-xl md:px-1 font-MorabbaB rounded-xl hover:text-white  transition-all duration-300 z-30">قدیمی و جدید</Link>
+                <Link to='/pics' className='archive hover:scale-95 duration-300 transition-all w-full md:w-3/4 h-[100px] md:h-[200px] flex flex-col justify-center items-center rounded-xl overflow-hidden border border-red-400'>
+                    <Link to="/pics" className=" text-center mr-5 text-white text-sm md:text-3xl md:px-1 font-MorabbaB rounded-xl hover:text-white  transition-all duration-300 z-30">آرشیو تصاویر</Link>
+                    <Link to="/pics" className=" text-center mr-5 text-white text-sm md:text-xl md:px-1 font-MorabbaB rounded-xl hover:text-white  transition-all duration-300 z-30">قدیمی و جدید</Link>
 
                 </Link>
                 <div className='arc hover:scale-95 transition-all duration-300   w-full md:w-1/4 h-[150px] md:h-[200px] flex justify-center items-center rounded-xl overflow-hidden border border-red-400'  >
