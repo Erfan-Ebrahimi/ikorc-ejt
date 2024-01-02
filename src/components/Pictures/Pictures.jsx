@@ -81,12 +81,7 @@ const Pictures = () => {
                 <SwiperSlide>
                     <img src="./assets/images/gallery/4.jpg" alt="3" />
                 </SwiperSlide>
-                <SwiperSlide>
-                    <img src="./assets/images/gallery/5.jpg" alt="4" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="./assets/images/gallery/6.jpg" alt="5" />
-                </SwiperSlide>
+                
                 <SwiperSlide>
                     <img src="./assets/images/gallery/7.jpg" alt="6" />
                 </SwiperSlide>
@@ -106,12 +101,7 @@ const Pictures = () => {
                 <SwiperSlide>
                     <img src="./assets/images/gallery/16.jpg" alt="11" />
                 </SwiperSlide>
-                <SwiperSlide>
-                    <img src="./assets/images/gallery/17.jpg" alt="12" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="./assets/images/gallery/18.jpg" alt="13" />
-                </SwiperSlide>
+                
             </Swiper>
 
             <div className=" container flex flex-col md:flex-row  justify-center items-center mt-20 gap-5">
