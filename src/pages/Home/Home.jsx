@@ -8,20 +8,9 @@ import Services from "../../components/Services/Services";
 import Shahid from "../../components/Shahid/Shahid";
 
 
-
-// import Swal from 'sweetalert2';
-// import { useEffect } from "react";
-
-
 const Home = () => {
 
-  // useEffect(() => {
-  //   Swal.fire({
-  //     imageUrl: "./assets/images/moj-logo.png",
-  //     imageHeight: 200,
-  //     text: "این سایت نمونه اولیه می باشد برای مشاهده حتما از سیستم شخخی یا لب تاپ استفاده کنید",
-  //   });
-  // }, [])
+
   return (
     <div className="">
       <Landing />
@@ -30,7 +19,7 @@ const Home = () => {
         <Actions />
         <Services />
         <Pictures />
-        <Shahid/>
+        <Shahid />
         <Address />
       </div>
       <Footer />
