@@ -72,45 +72,45 @@ const Pictures = () => {
             >
 
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/1.jpg" alt="" />
+                    <img src="./assets/images/gallery/1.jpg" alt="1" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/2.jpg" alt="" />
+                    <img src="./assets/images/gallery/2.jpg" alt="2" />
                 </SwiperSlide>
                
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/4.jpg" alt="" />
+                    <img src="./assets/images/gallery/4.jpg" alt="3" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/5.jpg" alt="" />
+                    <img src="./assets/images/gallery/5.jpg" alt="4" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/6.jpg" alt="" />
+                    <img src="./assets/images/gallery/6.jpg" alt="5" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/7.jpg" alt="" />
+                    <img src="./assets/images/gallery/7.jpg" alt="6" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/10.jpg" alt="" />
+                    <img src="./assets/images/gallery/10.jpg" alt="7" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/11.jpg" alt="" />
+                    <img src="./assets/images/gallery/11.jpg" alt="8" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/12.jpg" alt="" />
+                    <img src="./assets/images/gallery/12.jpg" alt="9" />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/13.jpg" alt="" />
+                    <img src="./assets/images/gallery/13.jpg" alt="10" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/16.jpg" alt="" />
+                    <img src="./assets/images/gallery/16.jpg" alt="11" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/17.jpg" alt="" />
+                    <img src="./assets/images/gallery/17.jpg" alt="12" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/gallery/18.jpg" alt="" />
+                    <img src="./assets/images/gallery/18.jpg" alt="13" />
                 </SwiperSlide>
             </Swiper>
 
