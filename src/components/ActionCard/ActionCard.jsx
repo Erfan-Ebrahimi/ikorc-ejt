@@ -25,7 +25,7 @@ const ActionCard = ({img , title , desc , date}) => {
         <h5 className="font-DanaM h-[60px] text-xs text-center px-2.5 mt-3 tracking-wide  text-white">{desc}</h5>
         <div className="flex justify-between items-center px-5  font-Dana pt-2">
           <h5 className="text-sm">{date}</h5>
-          <Link onClick={showM} to='/' className="text-xs bg-teal-700 text-center rounded-lg mb-1 tracking-wider py-1 px-1 md:px-2 text-white ">ادامه مطلب</Link>
+          <Link onClick={showM} to='/' className="text-xs bg-teal-700 text-center rounded-lg mb-1 tracking-wider py-1 px-[3px] md:px-2 text-white ">ادامه مطلب</Link>
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ const Navbar = () => {
                 <li className="relative h-full"><Link className="nav-link h-full flex items-center justify-between text-white tracking-wider whitespace-nowrap transition-all duration-300 relative px-1 py-1 font-DanaB hover:text-rose-500 " to="#speakers">اخبار</Link></li>
                 <li className="relative h-full"><Link className="nav-link h-full flex items-center justify-between text-white tracking-wider whitespace-nowrap transition-all duration-300 relative px-1 py-1 font-DanaB hover:text-rose-500 " to="#gallery">گالری</Link></li>
                 <li className="relative h-full" onClick={showChart}><Link className="nav-link h-full flex items-center justify-between text-white tracking-wider whitespace-nowrap transition-all duration-300 relative px-1 py-1 font-DanaB hover:text-rose-500 " to="#venue">چارت سازمانی</Link></li>
-                <li className="relative h-full"><Link className="nav-link h-full flex items-center justify-between text-white tracking-wider whitespace-nowrap transition-all duration-300 relative px-1 py-1 font-DanaB hover:text-rose-500 " to="#contact">تماس با ما</Link></li>
+                <li className="relative h-full"><Link className="nav-link h-full flex items-center justify-between text-white tracking-wider whitespace-nowrap transition-all duration-300 relative px-1 py-1 font-DanaB hover:text-rose-500 " to="/adminPanel">پنل ادمین</Link></li>
                 <Switcher />
             </ul>
         </nav>
