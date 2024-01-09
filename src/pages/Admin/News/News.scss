@@ -1,0 +1,12 @@
+.submit-btn {
+  background-color: rgb(5, 219, 59) !important;
+  
+  &:disabled{
+    background-color: red !important;
+    opacity: .5;
+  }
+}
+
+.ck-editor__editable{
+  height: 300px !important;
+}

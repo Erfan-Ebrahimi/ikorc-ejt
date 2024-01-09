@@ -4,13 +4,11 @@ import "./AdminPanel.scss"
 const AdminPanel = () => {
   return (
     <div className="w-full flex">
-      <div className="w-[20%]">
-        <Sidebar/>
-
+      <div className="w-[17%]">
+        <Sidebar />
       </div>
-      <div className="w-[80%]">
-        <Outlet/>
-
+      <div className="w-[80%] container mx-auto flex justify-center">
+        <Outlet />
       </div>
     </div>
   )

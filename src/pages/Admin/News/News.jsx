@@ -1,109 +1,267 @@
-import { useFormik } from "formik";
 import "./News.scss";
-import Editor from "../../../components/AdminCom/Editor/Editor";
-// import DataTable from '../../../components/AdminPanel/DataTable/DataTable';
-// import { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
-
+import { useEffect, useState } from 'react';
+import { useForm } from "../../../Hooks/useForm";
+import Input from "../../../components/AdminCom/Form/Input";
+import { minValidator } from "../../../validators/rules";
+import { IoCloudUploadOutline } from "react-icons/io5";
+import moment from 'jalali-moment'
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import HashLoader from "react-spinners/HashLoader";
+import Swal from "sweetalert2";
+import axios from "axios"
 
 const News = () => {
 
-  const formik = useFormik({
-    initialValues: {
-      title: '',
-      date: '',
-      author: '',
-      desc: '',
-      cover: ''
+  const [khabars, setKhabars] = useState([]);
+  // const [khabarCover, setKhabarCover] = useState(false);
+  const [khabarDescription, setKhabarDescription] = useState('')
+  // const [sizeFile, setSizeFile] = useState('')
+  // const [showCover, setShowCover] = useState("")
+  const [formState, onInputHandler] = useForm(
+    {
+      title: {
+        value: "",
+        isValid: false,
+      },
+      author: {
+        value: "",
+        isValid: false,
+      },
+      assortment: {
+        value: "",
+        isValid: false,
+      }
     },
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
+    false
+  );
+
+  const getAllNews = async () => {
+    const khabarsRes = await fetch('http://localhost:3000/api/v1/news')
+    const khabarsData = await khabarsRes.json()
+    setKhabars(khabarsData.data.news);
+    console.log(khabarsData);
+  }
+
+  useEffect(() => {
+    getAllNews()
+  }, [])
+
+  const addNewKhabar = (e) => {
+    e.preventDefault()
+    Swal.fire({
+      title: 'آیا از ثبت اطلاعات اطمینان دارید ؟',
+      icon: "question",
+      showCancelButton: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // let formData = new FormData()
+        // formData.append('title', formState.inputs.title.value)
+        // formData.append('author', formState.inputs.author.value)
+        // formData.append('assortment', formState.inputs.assortment.value)
+        // formData.append('description', khabarDescription)
+        // formData.append('cover', khabarCover)
+        axios.post(`http://localhost:3000/api/v1/news`, {
+          title: 'red',
+          description: 'dost',
+          author: "ali",
+          assortment: "baby"
+        })
+          .then((response) => {
+            // console.log(formData);
+            console.log(response);
+            // if (response.status == '201') {
+            //   Swal.fire('محصول با موفقیت ثبت شد :))', '', 'success')
+            //   actions.resetForm();
+
+            // }
+          }).catch(error => {
+            Swal.fire(`دوباره تلاش کنید !!!`, '', 'error')
+            console.log(error);
+          })
+      }
+    })
+
+  }
+
+  // ------------show size files
+  // const showSize = (fileData) => {
+  //   const { name: fileName, size } = fileData[0]
+  //   setSizeFile({ fileName, size })
+  // }
+
+
   return (
-    <div className=" p-6 mx-auto bg-indigo-950 rounded-md shadow-md dark:bg-gray-800 mt-20">
-    <form onSubmit={formik.handleSubmit} >
-      <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+    <div>
+      {
+        khabars.length ?
+          (
+            <div className="w-full container bg-indigo-950 rounded-md shadow-md mt-20">
 
-        <div >
-          <label className=" text-xl font-DanaB mb-5 text-white" htmlFor="title">تیتر</label>
-          <input
-            className="block w-full  px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
-            id="title"
-            name="title"
-            type="text"
-            onChange={formik.handleChange}
-            value={formik.values.title}
-          />
-          {formik.errors.title ? <div className="text-red-500">{formik.errors.title}</div> : null}
+              <div className="">
+                <div className="p-3">
+                  <h1 className="text-2xl font-MorabbaB text-green-400 inline-block border-b-2 border-b-green-400 pb-2">افزودن خبر</h1>
+                </div>
+                <form className="p-5">
+                  <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
 
-        </div>
-        <div>
-          <label className="bg-red-500" htmlFor="date">تاریخ</label>
-          <input
-            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
-            id="date"
-            name="date"
-            type="date"
-            onChange={formik.handleChange}
-            value={formik.values.date}
-          />
-          {formik.errors.date ? <div className="text-red-500">{formik.errors.date}</div> : null}
-        </div>
-        <div>
-          <label className="bg-red-500" htmlFor="author">نویسنده</label>
-          <input
-            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
-            id="author"
-            name="author"
-            type="text"
-            onChange={formik.handleChange}
-            value={formik.values.author}
-          />
-          {formik.errors.author ? <div className="text-red-500">{formik.errors.author}</div> : null}
+                    <div className="">
+                      <div className="">
+                        <label className="text-xl font-DanaB mb-5 text-white" style={{ display: "block" }}>
+                          تیتر
+                        </label>
+                        <Input
+                          element="input"
+                          type="text"
+                          id="title"
+                          onInputHandler={onInputHandler}
+                          validations={[minValidator(8)]}
+                        />
+                        <span className="error-message text-danger"></span>
+                      </div>
+                    </div>
 
-        </div>
-        <div>
-          <label className="bg-red-500" htmlFor="desc">متن</label>
-          <Editor value={formik.values.desc} setValue={formik.handleChange} />
-          {formik.errors.desc ? <div className="text-red-500">{formik.errors.desc}</div> : null}
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-white">
-            عکس
-          </label>
-          <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
-            <div className="space-y-1 text-center">
-              <svg className="mx-auto h-12 w-12 text-white" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" />
-              </svg>
-              <div className="flex text-sm text-gray-600">
-                <label htmlFor="cover" className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                  <span className="">Upload a file</span>
-                  <input
-                    id="cover"
-                    name="cover"
-                    type="file"
-                    className="sr-only"
-                    onChange={formik.handleChange}
-                    value={formik.values.cover}
-                  />
-                </label>
-                {formik.errors.cover ? <div className="text-red-500">{formik.errors.cover}</div> : null}
-                <p className="pl-1 text-white">or drag and drop</p>
+                    <div className="">
+                      <div className="">
+                        <label className="text-xl font-DanaB mb-5 text-white" style={{ display: "block" }}>
+                          نویسنده
+                        </label>
+                        <Input
+                          element="input"
+                          type="text"
+                          id="author"
+                          onInputHandler={onInputHandler}
+                          validations={[minValidator(8)]}
+                        />
+                        <span className="error-message text-danger"></span>
+                      </div>
+                    </div>
+
+                    <div className="">
+                      <div className="">
+                        <label className="text-xl font-DanaB mb-5 text-white" style={{ display: "block" }}>
+                          دسته بندی
+                        </label>
+                        <Input
+                          element="input"
+                          type="text"
+                          id="assortment"
+                          onInputHandler={onInputHandler}
+                          validations={[minValidator(8)]}
+                        />
+                        <span className="error-message text-danger"></span>
+                      </div>
+                    </div>
+
+                    <div className="">
+                      <div className="">
+                        <label className="text-xl font-DanaB mb-5 text-white" style={{ display: "block" }}>
+                          متن خبر
+                        </label>
+                        <CKEditor
+
+                          editor={ClassicEditor}
+                          data={khabarDescription}
+                          onChange={(event, editor) => {
+                            const data = editor.getData();
+                            setKhabarDescription(data)
+                          }}
+                        />
+
+                        <span className="error-message text-danger"></span>
+                      </div>
+                    </div>
+
+                    {/* <div className="border-2 border-green-100/40 border-dashed rounded-2xl">
+                      <div className="mx-auto flex flex-col justify-center items-center h-full">
+                        <label htmlFor="file" className="text-xl flex flex-col justify-center items-center font-DanaB mb-5  text-white text-center pt-4 w-full h-full" >
+                          <span>عکس</span>
+                          <IoCloudUploadOutline className="text-4xl text-green-400 " />
+                        </label>
+                        <div className="w-full h-full">
+                          <div className="w-[200px] h-[150px] border-0 mx-auto mt-2">
+                            <img src={showCover} className="w-full h-full border-0 outline-0" />
+                          </div>
+
+                          <input
+                            type="file"
+                            className='text-center mx-auto opacity-0 w-full h-full'
+                            id="file"
+                            accept="image/*"
+                            onChange={event => {
+                              setKhabarCover(event.target.files[0]);
+                              showSize(event.target.files)
+                              setShowCover(URL.createObjectURL(event.target.files[0]))
+                            }}
+                          />
+                        </div>
+                        {
+                          sizeFile ? <p className='text-green-500 font-Dana'>{sizeFile.fileName} <span className="text-yellow-200">|</span> {(sizeFile.size / 1000).toFixed(2)}KB   </p> : <p className='text-rose-400 font-Dana'>عکسی انتخاب نشده است</p>
+                        }
+                        <span className="text-red-500 font-Dana h-10 pt-2 "></span>
+
+                      </div>
+                    </div> */}
+
+                  </div>
+
+                  <div className="mt-20 mb-10">
+                    <button type="submit" onClick={addNewKhabar} disabled={!khabarDescription || !formState.isFormValid} className={`submit-btn text-white font-DanaB mx-auto flex justify-center items-center bg-green-500 w-40 h-10 rounded-xl text-2xl`}>ثبت خبـــــر</button>
+                  </div>
+
+                </form>
+
               </div>
-              <p className="text-xs text-white">PNG, JPG up to 10MB</p>
+              <div className="pb-10" >
+                <div className="p-3">
+                  <h1 className="text-2xl font-MorabbaB text-green-400 inline-block border-b-2 border-b-green-400 pb-2">لیست خبرها</h1>
+                </div>
+                <table className="w-[600px] mx-auto divide-y divide-gray-200">
+                  <thead className="bg-slate-900">
+                    <tr>
+                      <th className=" py-3 text-sm font-Dana text-center  font-medium text-white">شناسه</th>
+                      <th className=" py-3 text-sm font-Dana text-center  font-medium text-white">تیتر</th>
+                      <th className=" py-3 text-sm font-Dana text-center  font-medium text-white">نویسنده</th>
+                      <th className=" py-3 text-sm font-Dana text-center  font-medium text-white">تاریخ</th>
+                      <th className=" py-3 text-sm font-Dana text-center  font-medium text-white">حذف</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-200">
+                    {
+                      khabars.map((khabar , index) => (
+                        <tr className="text-center" key={khabar._id}>
+                          <td className="px-6 py-4 whitespace-nowrap font-DanaB">{index + 1}</td>
+                          <td className="px-6 py-4 whitespace-nowrap font-DanaB">{khabar.title}</td>
+                          <td className="px-6 py-4 whitespace-nowrap font-DanaB">{khabar.author}</td>
+                          <td className="px-6 py-4 whitespace-nowrap font-DanaB">{moment(khabar.newsDate, 'YYYY/MM/DD').locale('fa').format('YYYY/MM/DD')}</td>
+                          <td className="px-6 py-4 whitespace-nowrap font-DanaB">
+                            <button className="ml-2 px-4 py-2 font-medium text-white bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:shadow-outline-red active:bg-red-600 transition duration-150 ease-in-out">Delete</button>
+                          </td>
+                        </tr>
+                      ))
+                    }
+
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-
-      <button type="submit" className="text-green-500">Submit</button>
-    </form>
+          )
+          :
+          (
+            <div className='flex flex-col justify-center items-center w-full h-[100vh]'>
+              <p className='flex items-center text-white mb-10 text-5xl text-yellow-1 text-centerfont-bold tracking-wider font-MorabbaB'>در حال بارگذاری</p>
+              <HashLoader
+                color="#b6a740"
+                size={80}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+              />
+            </div>
+          )
+      }
 
     </div>
   )
 }
 
-export default News
+export default News;

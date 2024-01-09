@@ -1,0 +1,28 @@
+@font-face {
+  font-family: dana;
+  src: url("../../../../public/assets/fonts/Dana/woff2/DanaFaNum-Medium.woff2");
+}
+input {
+  border-radius: 5px !important;
+  background: #3f3c3c59;
+  border: none !important;
+  outline: none !important;
+  height: 40px;
+  width: 100%;
+  padding-right:10px !important ;
+  color: white !important;
+  font-family: dana !important;
+
+  &:focus {
+    outline: none !important;
+    background-color: rgba(224, 202, 202, 0.126);
+    box-shadow: none !important;
+  }
+}
+.success {
+  border-bottom: 3px solid greenyellow !important;
+}
+
+.error {
+  border-bottom: 3px solid rgb(238, 64, 64) !important;
+}
