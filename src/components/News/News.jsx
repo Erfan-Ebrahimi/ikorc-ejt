@@ -5,8 +5,20 @@ import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
 import 'swiper/css';
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const News = () => {
+  const [allNews, setAllNews] = useState()
+
+  useEffect(() => {
+    getAllNews()
+  }, [])
+  const getAllNews = async () => {
+    const newsData = await axios.get('http://localhost:3000/api/v1/news')
+    setAllNews(newsData.data.data.news.docs);
+  }
   return (
     <section className="mt-20">
 
@@ -24,11 +36,7 @@ const News = () => {
           </div>
         </div>
       </div>
-
-
-
       <div className="container mt-[60px]">
-
         <Swiper
           className="mySwiper mx-auto"
           modules={[Navigation, Autoplay, Pagination]}
@@ -75,25 +83,22 @@ const News = () => {
           }}
 
         >
+          {
+            allNews?.map((khabar) => (
+              <SwiperSlide key={khabar._id}>
+                <NewsCard {...khabar} />
+              </SwiperSlide>
 
-          <SwiperSlide>
-            <NewsCard img="1" title="برگزاری المپیاد جوانان" desc="میزبانی شرکت پخش و پالایش نفت شازند از المپیاد ورزشی فرزندان ذکور کارکنان زیر 25 سال کشور" date="1402/08/25" author="حسین محمدشاهی" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <NewsCard img="2" title="همایش تعالی خانواده" desc="همایش بزرگ “تعالی خانواده با محوریت تربیت فرزند” به همت باشگاه خدمات اجتماعی شرکت پالایش نفت امام خمینی (ره) شازند در سالن ستارگان برگزار شد." date="1402/09/07" author="حسین محمدشاهی" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <NewsCard img="3" title="اردوی زیارتی" desc="برگزاری اردوی یک روزه زیارتی قم با حضور خانواده کارکنان شرکت پخش و پالایش نفت شازند به همت باشگاه خدمات اجتماعی." date="1402/09/12" author="حسین محمدشاهی" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <NewsCard img="4" title="برگزاری مسابقات کشتی" desc="میزبانی شرکت پخش و پالایش نفت شازند از مسابقات کشتی فرزندان کارکنان رده سنی جوانان" date="1402/09/08" author="حسین محمدشاهی" />
-          </SwiperSlide>
+            ))
+          }
 
         </Swiper>
-
-        {/* <Pagination/> */}
       </div>
-
+      <div className="flex justify-center">
+        <Link to="/newsList" className="bg-emerald-900 font-MorabbaB w-40 text-center py-2 text-2xl text-white rounded-lg hover:bg-white hover:text-emerald-900 transition-colors duration-300">
+          لیست اخبار
+        </Link>
+      </div>
     </section>
   )
 }

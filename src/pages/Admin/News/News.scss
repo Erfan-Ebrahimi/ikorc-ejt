@@ -1,3 +1,8 @@
+@font-face {
+  font-family: dana;
+  src: url("../../../../public/assets/fonts/Dana/woff2/DanaFaNum-Medium.woff2");
+}
+
 .submit-btn {
   background-color: rgb(5, 219, 59) !important;
   
@@ -8,5 +13,13 @@
 }
 
 .ck-editor__editable{
-  height: 300px !important;
+  font-family: dana !important;
+  direction: rtl !important;
+  text-align: right !important;
+  height: 200px !important;
+  background: rgb(10, 13, 51) !important;
+  color: white;
+}
+.ck-toolbar{
+  background: rgb(177, 204, 228) !important;
 }

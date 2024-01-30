@@ -1,29 +1,26 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom"
 import "./NewsCard.scss"
-import Swal from 'sweetalert2';
+import moment from 'jalali-moment'
+import dumPurify from 'dompurify'
 
 
 
-const NewsCard = ({ img, title, desc, date, author }) => {
-  const showM = () => {
-    Swal.fire({
-      imageUrl: "./assets/images/moj-logo.png",
-      imageHeight: 200,
-      text: "*این سایت نمونه اولیه می باشد این قسمت توسعه داده نشده است*",
-    });
-  }
+
+const NewsCard = ({ _id,cover, title, description, newsDate, author }) => {
+
+  console.log("cover =>>>>" , cover);
   return (
     <div className="flex flex-col w-[320px] mr-4 md:w-[380px] bg-zinc-800 rounded-2xl overflow-hidden cursor-pointer hover:scale-90 hover:bg-zinc-600 duration-300">
-      <Link onClick={showM} to='' className="w-[380px]  overflow-hidden border border-emerald-600">
-        <img className="w-[380px] h-[200px] grayscale-[50%]  hover:grayscale-[10%]" src={`./assets/images/news/${img}.jpg`} alt="new-img" />
+      <Link to={`/newsList/${_id}`} className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl h-[200px]">
+        <img className="w-full h-full" src={cover} alt="new-img" />
       </Link>
-      <div className="mt-2 text-white">
-        <h3 className="font-DanaB text-sm text-yellow-100 text-center bg-teal-700 max-w-max mx-auto py-1 px-2 rounded-lg">{title}</h3>
-        <h5 className="font-DanaM text-xs text-right px-2.5 mt-3  line-clamp-2 text-yellow-50 tracking-widest">{desc}</h5>
-        <Link onClick={showM} to='/' className="block text-center text-zinc-100 font-Dana mt-5 px-1 py-0.5 rounded-md bg-teal-800">ادامــــه مطلـب</Link>
+      <div className="px-6 pt-3 pb-2 text-white text-center">
+        <h3 className="block mb-2 text-2xl font-MorabbaM  text-gray-100">{title}</h3>
+        <h5 className="font-DanaM font-[300] text-xs  px-2.5 mt-3 line-clamp-2 text-yellow-100 pt-2 border-g" dangerouslySetInnerHTML={{ __html: dumPurify.sanitize(description) }}></h5>
+        <Link to={`/newsList/${_id}`} className="block text-center text-zinc-100 font-DanaB mt-5 px-1 py-0.5 rounded-md bg-teal-800">ادامــــه مطلـب</Link>
         <div className="flex justify-between px-5  font-Dana  pt-2">
-          <h5 className="">{date}</h5>
+          <h5 className="font-Dana">{moment(newsDate, 'YYYY/MM/DD').locale('fa').format('YYYY/MM/DD')}</h5>
           <h5 className="text-sm">{author}</h5>
         </div>
       </div>

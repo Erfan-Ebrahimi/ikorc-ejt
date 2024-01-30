@@ -1,0 +1,31 @@
+.khabar-desc{
+    h1,h2,h3{
+        @apply font-Dana text-white pb-2 relative
+    }
+    h1::before,h2::before,h3::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        top: 5px;
+        right: -14px;
+        height: 5px;
+        border-radius: 100%;
+        background:rgb(78, 255, 24);
+    }
+    p{
+        @apply font-Dana text-white py-1 relative
+
+    
+    }
+    p::before{
+        content: "";
+        position: absolute;
+        width: 5px;
+        top: 12px;
+        right: -14px;
+        height: 5px;
+        border-radius: 100%;
+        background:rgb(24, 163, 255);
+    }
+    
+}

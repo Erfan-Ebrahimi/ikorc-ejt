@@ -76,9 +76,9 @@
   font-family: "Dana" !important;
 }
 .swal2-confirm {
-  background: #019ccb !important;
+  background: #15ff5b !important;
   color: #fff !important;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: "Dana" !important;
   font-weight: 800;
   border: none !important;
@@ -87,7 +87,7 @@
 .swal2-cancel {
   background: rgb(255, 19, 66) !important;
   color: #fff !important;
-  font-size: 1.5rem;
+  font-size: 2rem;
   border: none !important;
   outline: none !important;
   font-weight: 800;
@@ -130,4 +130,19 @@
 }
 .swiper-button-prev {
   @apply flex justify-center items-center mx-auto w-[30px] h-[30px] md:w-10 md:h-10 absolute left-12 md:left-11 bg-white dark:bg-zinc-600 hover:bg-gray-300 dark:hover:bg-white dark:child-hover:fill-zinc-700 rounded-full duration-500 shadow-lg z-0;
+}
+
+//-----------------------------BORDER---------------------------------//
+.border-g {
+  border-top: 1px solid !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: radial-gradient(
+    circle,
+    rgb(249, 115, 22, 0.3) 53%,
+    rgba(0, 128, 255, 0.3) 100%
+  );
 }
